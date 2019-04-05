@@ -35,6 +35,8 @@ class MySokoban extends JFrame implements KeyListener, ActionListener{
 	int iScore;
 	JLabel TitleLabel;
 	JButton Upbtn, Downbtn, Leftbtn, Rightbtn, Resetbtn;
+	Image DBuffer;
+	Graphics DBufGrp;
 
 	char [][] Map = new char[BYSize][BXSize];
 
@@ -163,7 +165,7 @@ class MySokoban extends JFrame implements KeyListener, ActionListener{
 		this.setVisible(true);
 		this.setResizable(false); //크기 고정
 		//		setLocation(500, 250);
-
+		
 		LoadMap();
 		TitleLabel.setText("Score : " + iScore);
 	}
